@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arun &amp; Janani — Wedding 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel:wght@400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════ BACKGROUND AUDIO ══════════ -->
+  <audio id="bgAudio" loop preload="auto" playsinline>
+    <source src="wedding-song.mpeg" type="audio/mpeg" />
+  </audio>
+
+  <!-- Music toggle button -->
+  <button class="music-btn" id="musicBtn" title="Toggle Music" aria-label="Toggle music">
+    <svg id="iconPlay" class="music-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M10 8.5l6 3.5-6 3.5V8.5z" fill="currentColor"/>
+    </svg>
+    <svg id="iconPause" class="music-icon hidden" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+      <rect x="9" y="8" width="2" height="8" rx="1" fill="currentColor"/>
+      <rect x="13" y="8" width="2" height="8" rx="1" fill="currentColor"/>
+    </svg>
+  </button>
+
+  <!-- ══════════ LOADER ══════════ -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <svg class="wheel-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="90" fill="none" stroke="#c9a96e" stroke-width="2.5"/>
+        <circle cx="100" cy="100" r="78" fill="none" stroke="#c9a96e" stroke-width="1" stroke-dasharray="5 7"/>
+        <line x1="100" y1="10"  x2="100" y2="40"  stroke="#c9a96e" stroke-width="3" stroke-linecap="round"/>
+        <line x1="100" y1="160" x2="100" y2="190" stroke="#c9a96e" stroke-width="3" stroke-linecap="round"/>
+        <line x1="10"  y1="100" x2="40"  y2="100" stroke="#c9a96e" stroke-width="3" stroke-linecap="round"/>
+        <line x1="160" y1="100" x2="190" y2="100" stroke="#c9a96e" stroke-width="3" stroke-linecap="round"/>
+        <line x1="27"  y1="27"  x2="49"  y2="49"  stroke="#c9a96e" stroke-width="3" stroke-linecap="round"/>
+        <line x1="151" y1="151" x2="173" y2="173" stroke="#c9a96e" stroke-width="3" stroke-linecap="round"/>
+        <line x1="173" y1="27"  x2="151" y2="49"  stroke="#c9a96e" stroke-width="3" stroke-linecap="round"/>
+        <line x1="27"  y1="173" x2="49"  y2="151" stroke="#c9a96e" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="100" cy="100" r="17" fill="none" stroke="#c9a96e" stroke-width="2"/>
+        <circle cx="100" cy="100" r="6"  fill="#c9a96e"/>
+        <text x="100" y="22" text-anchor="middle" fill="#c9a96e" font-size="9" font-family="Cinzel,serif" letter-spacing="2">N</text>
+      </svg>
+      <div class="loader-line"></div>
+      <p class="loader-text">Setting Sail to Forever</p>
+    </div>
+    <div class="loader-wipe"></div>
+  </div>
+
+  <!-- ══════════ NAV ══════════ -->
+  <nav class="nav" id="nav">
+    <a href="#home" class="nav-logo">A &amp; J</a>
+    <ul class="nav-links">
+      <li><a href="#story">Story</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#venue">Venue</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg" style="background-image:url('couple5.jpg')"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content reveal-hero">
+      <p class="hero-eyebrow">Wedding Invitation</p>
+      <h1 class="hero-names">
+        <span class="groom">Arun</span>
+        <span class="amp-wrap">
+          <svg class="amp-svg" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+            <text x="50%" y="72" text-anchor="middle" font-family="Cormorant Garamond,serif"
+                  font-size="72" font-style="italic" fill="#c9a96e">&amp;</text>
+          </svg>
+        </span>
+        <span class="bride">Janani</span>
+      </h1>
+      <div class="hero-ornament">
+        <span class="orn-line"></span>
+        <svg class="orn-diamond" viewBox="0 0 20 20">
+          <polygon points="10,0 20,10 10,20 0,10" fill="none" stroke="#c9a96e" stroke-width="1.5"/>
+          <polygon points="10,5 15,10 10,15 5,10" fill="#c9a96e" opacity=".45"/>
+        </svg>
+        <span class="orn-line"></span>
+      </div>
+      <p class="hero-date">13 &amp; 14 December 2026</p>
+      <p class="hero-tagline">Two worlds. One voyage. Forever.</p>
+      <a href="#events" class="hero-btn">View Invitation</a>
+    </div>
+    <div class="hero-scroll"><div class="hero-scroll-bar"></div></div>
+  </section>
+
+  <!-- ══════════ COUNTDOWN ══════════ -->
+  <section class="countdown-section" id="countdown">
+    <div class="container">
+      <p class="eyebrow">Counting down to</p>
+      <h2 class="sec-title navy">The Wedding Day</h2>
+      <div class="countdown-wrap" id="cdWrap">
+        <div class="cd-block reveal" data-delay="0">
+          <span class="cd-num" id="cd-days">00</span>
+          <span class="cd-label">Days</span>
+        </div>
+        <span class="cd-colon">:</span>
+        <div class="cd-block reveal" data-delay="100">
+          <span class="cd-num" id="cd-hours">00</span>
+          <span class="cd-label">Hours</span>
+        </div>
+        <span class="cd-colon">:</span>
+        <div class="cd-block reveal" data-delay="200">
+          <span class="cd-num" id="cd-mins">00</span>
+          <span class="cd-label">Minutes</span>
+        </div>
+        <span class="cd-colon">:</span>
+        <div class="cd-block reveal" data-delay="300">
+          <span class="cd-num" id="cd-secs">00</span>
+          <span class="cd-label">Seconds</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ STORY ══════════ -->
+  <section class="story-section" id="story">
+    <div class="container story-grid">
+      <div class="story-imgs reveal" data-delay="0">
+        <div class="si-main" style="background-image:url('couple2.jpg')"></div>
+        <div class="si-sm"   style="background-image:url('couple5.jpg')"></div>
+      </div>
+      <div class="story-text reveal" data-delay="150">
+        <p class="eyebrow left">Our Story</p>
+        <h2 class="sec-title navy left">A Love Set Sail</h2>
+        <div class="story-badge">
+          <svg class="badge-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="14" fill="none" stroke="#1a4a7a" stroke-width="1.5"/>
+            <polygon points="16,4 18,14 16,16 14,14" fill="#1a4a7a"/>
+            <polygon points="16,28 18,18 16,16 14,18" fill="#1a4a7a" opacity=".4"/>
+            <polygon points="4,16 14,14 16,16 14,18" fill="#1a4a7a" opacity=".4"/>
+            <polygon points="28,16 18,14 16,16 18,18" fill="#1a4a7a" opacity=".4"/>
+            <circle cx="16" cy="16" r="2.5" fill="#1a4a7a"/>
+          </svg>
+          <span>Mariner at heart &nbsp;&middot;&nbsp; Tamil soul</span>
+        </div>
+        <p class="story-p">
+          He navigates the world's great oceans, carrying the horizon in his eyes
+          and home in his heart. She keeps the light burning — steady, warm, golden.
+        </p>
+        <p class="story-p">
+          A journey that began with a smile, a silk saree, and a golden ring —
+          now blossoming into a lifetime together.
+        </p>
+        <div class="story-ring-img">
+          <img src="couple3.jpg" alt="Arun and Janani rings" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ EVENTS ══════════ -->
+  <section class="events-section" id="events">
+    <div class="events-bg-pattern"></div>
+    <div class="container">
+      <p class="eyebrow gold">Save the Dates</p>
+      <h2 class="sec-title white">Wedding Events</h2>
+      <div class="events-grid">
+
+        <!-- Reception -->
+        <div class="event-card reveal" data-delay="0">
+          <div class="ec-top-bar"></div>
+          <div class="ec-date-pill">
+            <span class="ec-day">13</span>
+            <span class="ec-mon">DEC 2026</span>
+          </div>
+          <svg class="ec-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 8a16 16 0 1 0 0 32 12 12 0 1 1 0-32z" fill="none" stroke="#c9a96e" stroke-width="2"/>
+            <circle cx="34" cy="14" r="2" fill="#c9a96e" opacity=".7"/>
+            <circle cx="38" cy="22" r="1.5" fill="#c9a96e" opacity=".4"/>
+          </svg>
+          <h3 class="ec-name">Wedding Reception</h3>
+          <p class="ec-time">8:00 PM — 11:00 PM</p>
+          <div class="ec-rule"></div>
+          <p class="ec-venue">Sri Balaji Mahal</p>
+          <p class="ec-addr">K. Mettur Bridge, Anthiyur</p>
+          <p class="ec-loc">Tamil Nadu 638501</p>
+          <a href="https://maps.app.goo.gl/8JBhWLTWuvesHor28" target="_blank" class="ec-map">
+            Get Directions
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Divider -->
+        <div class="events-mid">
+          <svg class="mid-ornament" viewBox="0 0 60 300" xmlns="http://www.w3.org/2000/svg">
+            <line x1="30" y1="0" x2="30" y2="110" stroke="#c9a96e" stroke-width="1" opacity=".35"/>
+            <circle cx="30" cy="130" r="22" fill="none" stroke="#c9a96e" stroke-width="1.5"/>
+            <circle cx="30" cy="130" r="8"  fill="#c9a96e" opacity=".55"/>
+            <polygon points="30,112 35,125 30,130 25,125" fill="#c9a96e"/>
+            <polygon points="30,148 35,135 30,130 25,135" fill="#c9a96e" opacity=".4"/>
+            <line x1="30" y1="152" x2="30" y2="300" stroke="#c9a96e" stroke-width="1" opacity=".35"/>
+          </svg>
+        </div>
+
+        <!-- Muhurtham -->
+        <div class="event-card reveal" data-delay="150">
+          <div class="ec-top-bar"></div>
+          <div class="ec-date-pill">
+            <span class="ec-day">14</span>
+            <span class="ec-mon">DEC 2026</span>
+          </div>
+          <svg class="ec-icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="28" r="8" fill="none" stroke="#c9a96e" stroke-width="2"/>
+            <line x1="24" y1="6"  x2="24" y2="13" stroke="#c9a96e" stroke-width="2" stroke-linecap="round"/>
+            <line x1="8"  y1="20" x2="14" y2="23" stroke="#c9a96e" stroke-width="2" stroke-linecap="round"/>
+            <line x1="40" y1="20" x2="34" y2="23" stroke="#c9a96e" stroke-width="2" stroke-linecap="round"/>
+            <line x1="12" y1="10" x2="17" y2="15" stroke="#c9a96e" stroke-width="2" stroke-linecap="round"/>
+            <line x1="36" y1="10" x2="31" y2="15" stroke="#c9a96e" stroke-width="2" stroke-linecap="round"/>
+            <line x1="4"  y1="36" x2="44" y2="36" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <h3 class="ec-name">Muhurtham</h3>
+          <p class="ec-time">6:45 AM — 7:30 AM</p>
+          <div class="ec-rule"></div>
+          <p class="ec-venue">Koneri Perumal Kovil</p>
+          <p class="ec-addr">Surappalli</p>
+          <p class="ec-loc">Tamil Nadu 636501</p>
+          <a href="https://maps.app.goo.gl/kcf2gg13JAsTF35N6" target="_blank" class="ec-map">
+            Get Directions
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ GALLERY ══════════ -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <p class="eyebrow">Our Moments</p>
+      <h2 class="sec-title navy">Photo Gallery</h2>
+    </div>
+
+    <!-- Desktop -->
+    <div class="gallery-desktop container">
+      <div class="gd-item gd-tall reveal" data-delay="0"
+           style="background-image:url('couple2.jpg')"
+           data-label="Golden Hour Promise"
+           onclick="openLightbox('couple2.jpg')"></div>
+      <div class="gd-item reveal" data-delay="100"
+           style="background-image:url('couple1.jpg')"
+           data-label="Sacred Blessings"
+           onclick="openLightbox('couple1.jpg')"></div>
+      <div class="gd-item reveal" data-delay="200"
+           style="background-image:url('couple3.jpg')"
+           data-label="A Ring of Forever"
+           onclick="openLightbox('couple3.jpg')"></div>
+      <div class="gd-item gd-wide reveal" data-delay="300"
+           style="background-image:url('couple4.jpg')"
+           data-label="Hand in Hand"
+           onclick="openLightbox('couple4.jpg')"></div>
+    </div>
+
+    <!-- Mobile labeled -->
+    <div class="gallery-mobile container">
+      <div class="gm-card reveal" data-delay="0">
+        <div class="gm-img" style="background-image:url('couple2.jpg')" onclick="openLightbox('couple2.jpg')"></div>
+        <div class="gm-label"><span class="gm-num">01</span><span class="gm-title">Golden Hour Promise</span></div>
+      </div>
+      <div class="gm-card reveal" data-delay="80">
+        <div class="gm-img" style="background-image:url('couple1.jpg')" onclick="openLightbox('couple1.jpg')"></div>
+        <div class="gm-label"><span class="gm-num">02</span><span class="gm-title">Sacred Blessings</span></div>
+      </div>
+      <div class="gm-card reveal" data-delay="160">
+        <div class="gm-img" style="background-image:url('couple3.jpg')" onclick="openLightbox('couple3.jpg')"></div>
+        <div class="gm-label"><span class="gm-num">03</span><span class="gm-title">A Ring of Forever</span></div>
+      </div>
+      <div class="gm-card reveal" data-delay="240">
+        <div class="gm-img" style="background-image:url('couple4.jpg')" onclick="openLightbox('couple4.jpg')"></div>
+        <div class="gm-label"><span class="gm-num">04</span><span class="gm-title">Hand in Hand</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ VENUE ══════════ -->
+  <section class="venue-section" id="venue">
+    <div class="container">
+      <p class="eyebrow">Where We Celebrate</p>
+      <h2 class="sec-title navy">The Venues</h2>
+
+      <!-- Sri Balaji Mahal -->
+      <div class="venue-block reveal" data-delay="0">
+        <div class="venue-grid">
+          <div class="venue-imgs">
+            <div class="vi-main" style="background-image:url('venue1.webp')"></div>
+            <div class="vi-inner" style="background-image:url('venue2.webp')"></div>
+          </div>
+          <div class="venue-info">
+            <div class="venue-tag">Reception Night</div>
+            <h3 class="venue-name">Sri Balaji Mahal</h3>
+            <p class="venue-addr">K. Mettur Bridge, Anthiyur, Tamil Nadu 638501</p>
+            <p class="venue-time-line">13 December 2026 &nbsp;&bull;&nbsp; 8:00 PM – 11:00 PM</p>
+            <div class="venue-map-embed">
+              <iframe
+                src="https://www.google.com/maps?q=SRI+BALAJI+MAHAL,+K.Mettur+Bridge,+Anthiyur,+Tamil+Nadu+638501&output=embed"
+                width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" title="Sri Balaji Mahal Map">
+              </iframe>
+            </div>
+            <a href="https://maps.app.goo.gl/8JBhWLTWuvesHor28" target="_blank" class="venue-btn">
+              Open in Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Koneri Perumal Kovil -->
+      <div class="venue-block reveal" data-delay="100" style="margin-top:70px;">
+        <div class="venue-grid reverse">
+          <div class="venue-info">
+            <div class="venue-tag muhurtham">Muhurtham</div>
+            <h3 class="venue-name">Koneri Perumal Kovil</h3>
+            <p class="venue-addr">Surappalli, Tamil Nadu 636501</p>
+            <p class="venue-time-line">14 December 2026 &nbsp;&bull;&nbsp; 6:45 AM – 7:30 AM</p>
+            <div class="venue-map-embed">
+              <iframe
+                src="https://www.google.com/maps?q=Koneri+Perumal+Kovil,+Surappalli,+Tamil+Nadu+636501&output=embed"
+                width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" title="Koneri Perumal Kovil Map">
+              </iframe>
+            </div>
+            <a href="https://maps.app.goo.gl/kcf2gg13JAsTF35N6" target="_blank" class="venue-btn">
+              Open in Google Maps
+            </a>
+          </div>
+          <div class="venue-imgs">
+            <div class="vi-main" style="background-image:url('couple5.jpg'); background-position: top center;"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════ CONTACT ══════════ -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <p class="eyebrow gold">Get in Touch</p>
+      <h2 class="sec-title white">Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-card reveal" data-delay="0">
+          <div class="cc-avatar">A</div>
+          <h3 class="cc-name">Arun</h3>
+          <p class="cc-role">Groom</p>
+          <a href="tel:+919043643924" class="cc-phone">
+            <svg class="cc-phone-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            +91 90436 43924
+          </a>
+        </div>
+        <div class="contact-card reveal" data-delay="120">
+          <div class="cc-avatar bride-av">J</div>
+          <h3 class="cc-name">Janani</h3>
+          <p class="cc-role">Bride</p>
+          <p class="cc-note">Join us in celebrating<br/>our special day!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="footer-dots"></div>
+    <div class="footer-inner">
+      <div class="footer-orn">— ✦ —</div>
+      <h3 class="footer-names">Arun &amp; Janani</h3>
+      <p class="footer-date">13 &amp; 14 December 2026</p>
+      <p class="footer-sub">Long live love. Fair winds ahead.</p>
+      <div class="footer-rule"></div>
+      <p class="footer-credit">Made with love</p>
+    </div>
+  </footer>
+
+  <!-- ══════════ LIGHTBOX ══════════ -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lb-x" id="lbClose" onclick="closeLightbox()">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="5" y1="5" x2="19" y2="19" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="19" y1="5" x2="5"  y2="19" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <img src="" id="lbImg" alt="Gallery" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
